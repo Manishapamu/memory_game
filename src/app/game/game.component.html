@@ -1,0 +1,26 @@
+<h1>🍕 Memory Game 🍔</h1>
+
+<h2>Round {{ round }}</h2>
+
+<h3>⏱️ Time Left: {{ timeLeft }} sec</h3>
+
+<div class="board">
+
+  <div
+    class="card"
+    *ngFor="let card of cards"
+    [style.visibility]="card.hidden ? 'hidden' : 'visible'"
+    (click)="flipCard(card)"
+  >
+
+    <span *ngIf="card.flipped">
+      {{ card.value }}
+    </span>
+
+    <span *ngIf="!card.flipped">
+      🎁
+    </span>
+
+  </div>
+
+</div>
