@@ -1,18 +1,24 @@
 body{
+  margin:0;
   font-family: Arial, sans-serif;
 }
+
 :host{
   display:block;
   min-height:100vh;
 
-  background-image:url('/assets/girl.jpg');
+  background-image:url('/assets/bubu.jpg');
   background-size:cover;
-  background-position:center;
+  background-position:center center;
   background-repeat:no-repeat;
-  background-attachment:fixed;
+
+  padding:10px;
 }
+
 h1,h2,h3{
   text-align:center;
+  color:black;
+  text-shadow:none;
 }
 
 .board{
@@ -39,4 +45,28 @@ h1,h2,h3{
 
 .card:hover{
   transform:scale(1.05);
+}
+
+/* 📱 Mobile */
+
+@media (max-width: 600px){
+
+  .board{
+    grid-template-columns:repeat(2,80px);
+    gap:10px;
+  }
+
+  .card{
+    width:80px;
+    height:80px;
+    font-size:30px;
+  }
+
+  h1{
+    font-size:24px;
+  }
+
+  h2,h3{
+    font-size:18px;
+  }
 }
